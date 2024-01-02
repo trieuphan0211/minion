@@ -1,0 +1,23 @@
+
+#server.ssl.enabled=true
+#server.ssl.protocol=TLS
+spring:
+  thymeleaf:
+    prefix: file:///D:///Workspace//FullStack//minion//target//classes//static/
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:sqlserver://minion.database.windows.net:1433;database=Minion;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: stephenphan
+    password: Trieuphan@037210626002112002
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: sql_server
+    database-platform: org.hibernate.dialect.SQLServerDialect

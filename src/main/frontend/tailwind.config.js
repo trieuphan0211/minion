@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm: { max: "639px" },
@@ -14,7 +14,11 @@ module.exports = {
       "2xl": { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
     },
-    extend: {},
+    extend: {
+      animation: {
+        all: "all 0.3s ease-in-out",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
